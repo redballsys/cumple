@@ -321,7 +321,11 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #fdf7f0 url('./assets/images/fondo_principal.webp') center/cover no-repeat;
+    background-color: #fdf7f0;
+    background-image: url('./assets/images/fondo_principal.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% auto; /* <---- AQUÍ defines el tamaño */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -329,7 +333,7 @@ body {
     z-index: 9999;
     text-align: center;
     padding: 20px;
-  }
+  }  
   
   .pantalla-inicial h2 {
     font-size: 1.2rem;
