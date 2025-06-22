@@ -323,10 +323,10 @@ body {
     height: 100vh;
     background-color: #fdf7f0;
     background-image: url('./assets/images/fondo_principal.webp');
-    background-size: contain;          /* Contiene toda la imagen sin recorte */
-    background-position: center center;
+    background-size: cover;             /* ✅ Cubre todo el alto y ancho */
+    background-position: center top;    /* ✅ Se enfoca en mostrar el inicio del diseño */
     background-repeat: no-repeat;
-    background-attachment: local;      /* Para que no se mueva al hacer scroll */
+    background-attachment: scroll;      /* ✅ Permite buen scroll en móviles */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -334,7 +334,7 @@ body {
     z-index: 9999;
     text-align: center;
     padding: 20px;
-  }  
+  }   
   
   .pantalla-inicial h2 {
     font-size: 1.2rem;
@@ -432,11 +432,5 @@ body {
   
     .edad .numero {
       font-size: 4rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .pantalla-inicial {
-      background-size: 100% auto;
     }
   }
