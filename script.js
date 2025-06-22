@@ -61,7 +61,7 @@ function actualizarContador() {
 setInterval(actualizarContador, 1000);
 actualizarContador();
 
-// AUDIO FINAL
+// AUDIO FINAL con control de volumen sobre audioInicio
 const playFinal = document.getElementById("playFinal");
 
 let audioFinal = new Audio("assets/audio/final.mp3");
@@ -69,12 +69,22 @@ let isPlayingFinal = false;
 
 playFinal.addEventListener("click", () => {
   if (!isPlayingFinal) {
+    // Bajar volumen del audio de bienvenida antes de reproducir el final
+    audioInicio.volume = 0.2;
     audioFinal.play();
     isPlayingFinal = true;
     playFinal.textContent = "⏸";
+
+    // Cuando termine el audio final, restauramos el volumen original
+    audioFinal.addEventListener("ended", () => {
+      audioInicio.volume = 1.0;
+      isPlayingFinal = false;
+      playFinal.textContent = "▶";
+    });
   } else {
     audioFinal.pause();
     isPlayingFinal = false;
     playFinal.textContent = "▶";
+    audioInicio.volume = 1.0; // Si se pausa manualmente, también se restaura volumen
   }
 });
