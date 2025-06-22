@@ -323,9 +323,10 @@ body {
     height: 100vh;
     background-color: #fdf7f0;
     background-image: url('./assets/images/fondo_principal.webp');
+    background-size: contain;          /* Contiene toda la imagen sin recorte */
+    background-position: center center;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: 170% auto; /* <---- AQUÍ defines el tamaño */
+    background-attachment: local;      /* Para que no se mueva al hacer scroll */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,6 +343,13 @@ body {
     max-width: 90%;
     margin-bottom: 20px;
   }
+
+  @media (max-width: 768px) {
+    .pantalla-inicial {
+      background-size: cover; /* O usa contain si prefieres que no se recorte nada */
+      background-attachment: scroll;
+    }
+  }  
   
   .oculto {
     display: none;
