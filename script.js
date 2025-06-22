@@ -1,5 +1,7 @@
 // AUDIO DE BIENVENIDA
 const playInicio = document.getElementById("playInicio");
+const pantallaInicial = document.getElementById("pantalla-inicial");
+const contenido = document.getElementById("contenido");
 
 let audioInicio = new Audio("assets/audio/bienvenida.mp3");
 let isPlaying = false;
@@ -8,11 +10,11 @@ playInicio.addEventListener("click", () => {
   if (!isPlaying) {
     audioInicio.play();
     isPlaying = true;
-    playInicio.textContent = "⏸"; // cambiar ícono a pausa
-  } else {
-    audioInicio.pause();
-    isPlaying = false;
-    playInicio.textContent = "▶";
+
+    // Oculta pantalla inicial, muestra contenido con efecto
+    pantallaInicial.style.display = "none";
+    contenido.classList.remove("oculto");
+    contenido.classList.add("fade-in");
   }
 });
 
@@ -88,3 +90,6 @@ playFinal.addEventListener("click", () => {
     audioInicio.volume = 1.0; // Si se pausa manualmente, también se restaura volumen
   }
 });
+
+contenido.classList.remove("oculto");
+contenido.classList.add("fade-in");
