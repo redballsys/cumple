@@ -384,3 +384,24 @@ body {
   .pantalla-inicial.fade-out {
     animation: fadeOut 1s ease forwards;
   }
+
+  .boton-mute {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #5a3b1f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 99999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+  }
+  
+  .boton-mute:hover {
+    transform: scale(1.1);
+  }
