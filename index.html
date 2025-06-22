@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invitación Vaquera</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SECCIÓN 1: BIENVENIDA -->
+  <section id="bienvenida" class="seccion">
+    <h2>¡ANTES DE COMENZAR! DA</h2>
+    
+    <div class="reproductor">
+      <button id="playInicio" class="btn-audio">
+        ▶
+      </button>
+    </div>
+
+    <p>CLIC PARA COMENZAR LA DIVERSIÓN</p>
+
+    <img src="assets/images/craneo.png" alt="Craneo de toro" class="decoracion" />
+  </section>
+
+  <!-- SECCIÓN 2: EDAD Y NOMBRE -->
+<section id="presentacion" class="seccion">
+    <h3 class="subtitulo">PÓNGANSE SUS BOTAS Y SOMBREROS Y ACOMPAÑAME A FESTEJAR MIS</h3>
+    
+    <div class="edad">
+      <span class="numero">30</span>
+    </div>
+  
+    <h1 class="nombre">DANIEL<br>AVENDAÑO</h1>
+  </section>
+
+  <!-- SECCIÓN 3: CACTUS Y MENSAJE RANCHERO -->
+<section id="mensaje-ranchero" class="seccion seccion-cactus">
+    <img src="assets/images/cactus.png" alt="Ilustración de cactus" class="cactus-img animar" />
+    
+    <p class="mensaje">
+      ¡NO SE QUEDEN EN CASA, VAQUEROS Y VAQUERAS,<br>
+      QUE ESTA FIESTA SERÁ LA MÁS RANCHERA!
+    </p>
+  </section>
+
+  <!-- SECCIÓN 4: SAVE THE DATE -->
+<section id="save-date" class="seccion">
+    <h2 class="titulo-fecha">SAVE THE DATE</h2>
+  
+    <div class="calendario">
+      <h3 class="mes">JULIO 2025</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Do</th><th>Lu</th><th>Ma</th><th>Mi</th><th>Ju</th><th>Vi</th><th>Sa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>  </td><td>  </td><td> 1</td><td> 2</td><td> 3</td><td> 4</td><td> 5</td></tr>
+          <tr><td> 6</td><td> 7</td><td> 8</td><td> 9</td><td>10</td><td>11</td><td class="resaltado">12</td></tr>
+          <tr><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td></tr>
+          <!-- puedes continuar si quieres mostrar más semanas -->
+        </tbody>
+      </table>
+    </div>
+  
+    <p class="fecha-grande">SÁBADO <span class="numero-dia">12</span> JULIO</p>
+  
+    <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Cumpleaños+Daniel+Avendaño&dates=20250712T200000Z/20250713T020000Z&details=Fiesta+vaquera+imperdible&location=Salón+Campestre" 
+       class="btn-calendario" 
+       target="_blank" 
+       rel="noopener noreferrer">
+      GUARDAR EN MI CALENDARIO
+    </a>
+  </section>
+
+  <!-- SECCIÓN 5: CONTADOR Y CONFIRMACIÓN -->
+<section id="confirmacion" class="seccion">
+    <h2 class="titulo-contador">SOLO FALTAN</h2>
+  
+    <div id="contador" class="contador">
+      <div><span id="dias">00</span><small>DÍAS</small></div>
+      <div><span id="horas">00</span><small>HRS</small></div>
+      <div><span id="minutos">00</span><small>MIN</small></div>
+      <div><span id="segundos">00</span><small>SEG</small></div>
+    </div>
+  
+    <a 
+      class="btn-whatsapp"
+      href="https://wa.me/5219991234567?text=¡Hola!+Confirmo+mi+asistencia+a+la+fiesta+vaquera+de+Daniel+Avendaño+el+12+de+julio+🎉🤠"
+      target="_blank"
+      rel="noopener noreferrer">
+      CONFIRMAR ASISTENCIA
+    </a>
+  
+    <p class="llamado">DA CLIC AQUÍ</p>
+  </section>
+
+  <!-- SECCIÓN 6: UBICACIÓN Y VESTIMENTA -->
+<section id="ubicacion" class="seccion">
+    <h2 class="titulo-seccion">UBICACIÓN</h2>
+    <p class="sububicacion">RECEPCIÓN</p>
+  
+    <a 
+      href="https://www.google.com/maps?q=Salón+Campestre+TuCiudad"
+      class="btn-mapa"
+      target="_blank"
+      rel="noopener noreferrer">
+      VER UBICACIÓN
+    </a>
+  
+    <p class="direccion">Salón Campestre - 8:00 PM</p>
+  
+    <div class="vestimenta">
+      <h3 class="titulo-vestimenta">CÓDIGO DE VESTIMENTA</h3>
+      <p class="texto-vestimenta">VAQUERA</p>
+      <img src="assets/images/herradura.png" alt="Herradura decorativa" class="icono-vestimenta">
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: DESPEDIDA Y AUDIO FINAL -->
+<section id="despedida" class="seccion">
+    <h2 class="titulo-despedida">¡PARA FINALIZAR, DA CLIC Y PRESTA ATENCIÓN!</h2>
+  
+    <div class="reproductor">
+      <button id="playFinal" class="btn-audio">▶</button>
+    </div>
+  
+    <h1 class="mensaje-final">NO FALTES<br>VAQUERO</h1>
+    <img src="assets/images/sombrero.png" alt="Sombrero decorativo" class="decoracion-final">
+  </section>
+  
+
+  <!-- Más secciones se agregarán después -->
+
+  <script src="script.js"></script>
+</body>
+</html>
