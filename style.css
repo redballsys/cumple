@@ -325,7 +325,7 @@ body {
     background-image: url('./assets/images/fondo_principal.webp');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% auto; /* <---- AQUÍ defines el tamaño */
+    background-size: 125% auto; /* <---- AQUÍ defines el tamaño */
     display: flex;
     flex-direction: column;
     justify-content: center;
