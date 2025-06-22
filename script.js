@@ -97,3 +97,10 @@ playFinal.addEventListener("click", () => {
 
 contenido.classList.remove("oculto");
 contenido.classList.add("fade-in");
+
+const muteBtn = document.getElementById("muteBtn");
+
+muteBtn.addEventListener("click", () => {
+  audioInicio.muted = !audioInicio.muted;
+  muteBtn.textContent = audioInicio.muted ? "🔈" : "🔇";
+});
