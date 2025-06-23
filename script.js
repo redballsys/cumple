@@ -41,7 +41,7 @@ const minutosEl = document.getElementById("minutos");
 const segundosEl = document.getElementById("segundos");
 
 function actualizarContador() {
-    const fechaEvento = new Date("2025-07-12T20:00:00");
+    const fechaEvento = new Date("2025-07-12T19:30:00");
     const ahora = new Date();
     const diferencia = fechaEvento - ahora;
 
