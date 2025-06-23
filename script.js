@@ -41,27 +41,28 @@ const minutosEl = document.getElementById("minutos");
 const segundosEl = document.getElementById("segundos");
 
 function actualizarContador() {
-    const fechaEvento = new Date("2025-07-12T19:30:00");
-    const ahora = new Date();
-    const diferencia = fechaEvento - ahora;
+  // Hora del evento en hora local de Ciudad de México
+  const { DateTime } = luxon;
+  const fechaEvento = DateTime.fromObject(
+    { year: 2025, month: 7, day: 12, hour: 13, minute: 30 },
+    { zone: "America/Mexico_City" }
+  );
+  
+  const ahora = DateTime.now().setZone("America/Mexico_City");
+  const diferencia = fechaEvento.diff(ahora, ["days", "hours", "minutes", "seconds"]).toObject();
 
-    if (diferencia <= 0) {
-        diasEl.textContent = "00";
-        horasEl.textContent = "00";
-        minutosEl.textContent = "00";
-        segundosEl.textContent = "00";
-        return;
-    }
+  if (diferencia.days <= 0 && diferencia.hours <= 0 && diferencia.minutes <= 0 && diferencia.seconds <= 0) {
+    diasEl.textContent = "00";
+    horasEl.textContent = "00";
+    minutosEl.textContent = "00";
+    segundosEl.textContent = "00";
+    return;
+  }
 
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
-    const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
-    const segundos = Math.floor((diferencia / 1000) % 60);
-
-    diasEl.textContent = String(dias).padStart(2, "0");
-    horasEl.textContent = String(horas).padStart(2, "0");
-    minutosEl.textContent = String(minutos).padStart(2, "0");
-    segundosEl.textContent = String(segundos).padStart(2, "0");
+  diasEl.textContent = String(Math.floor(diferencia.days)).padStart(2, "0");
+  horasEl.textContent = String(Math.floor(diferencia.hours)).padStart(2, "0");
+  minutosEl.textContent = String(Math.floor(diferencia.minutes)).padStart(2, "0");
+  segundosEl.textContent = String(Math.floor(diferencia.seconds)).padStart(2, "0");
 }
 
 setInterval(actualizarContador, 1000);
