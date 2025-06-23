@@ -1,457 +1,471 @@
 /* ESTILO GLOBAL */
 body {
-    background-image: url('./assets/images/fondo.webp');
-    background-size: cover;        /* Para que cubra toda la pantalla */
-    background-position: center;   /* Centra el fondo */
-    background-repeat: no-repeat;  /* Evita que se repita */
-    background-attachment: fixed;  /* Hace que el fondo no se mueva al hacer scroll */
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: #fdf7f0;
-    color: #5a3b1f;
-    text-align: center;
-    overflow-x: hidden;
-  }
-  
-  .seccion {
-    padding: 40px 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* REPRODUCTOR */
-  .reproductor {
-    margin: 20px 0;
-  }
-  
-  .btn-audio {
-    font-size: 48px;
-    background: none;
-    border: none;
-    color: #5a3b1f;
-    cursor: pointer;
-  }
-  
-  .btn-audio:hover {
-    transform: scale(1.2);
-  }
-  
-  .decoracion {
-    width: 120px;
-    margin-top: 30px;
-  }
+  background-image: url('./assets/images/fondo.webp');
+  background-size: cover;
+  /* Para que cubra toda la pantalla */
+  background-position: center;
+  /* Centra el fondo */
+  background-repeat: no-repeat;
+  /* Evita que se repita */
+  background-attachment: fixed;
+  /* Hace que el fondo no se mueva al hacer scroll */
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fdf7f0;
+  color: #5a3b1f;
+  text-align: center;
+  overflow-x: hidden;
+}
 
-  /* SECCIÓN 2: EDAD Y NOMBRE */
+.seccion {
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* REPRODUCTOR */
+.reproductor {
+  margin: 20px 0;
+}
+
+.btn-audio {
+  font-size: 48px;
+  background: none;
+  border: none;
+  color: #5a3b1f;
+  cursor: pointer;
+}
+
+.btn-audio:hover {
+  transform: scale(1.2);
+}
+
+.decoracion {
+  width: 120px;
+  margin-top: 30px;
+}
+
+/* SECCIÓN 2: EDAD Y NOMBRE */
 .subtitulo {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 20px;
-    max-width: 90%;
-  }
-  
-  .edad .numero {
-    font-size: 5rem;
-    font-weight: bold;
-    background: url("assets/images/textura-vaca.png");
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+
+.edad .numero {
+  font-size: 5rem;
+  font-weight: bold;
+  background: url("assets/images/textura-vaca.png");
+  background-size: cover;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px #5a3b1f50;
+}
+
+.nombre {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  line-height: 1.1;
+  font-family: 'Georgia', serif;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* SECCIÓN 3: CACTUS Y MENSAJE */
+.seccion-cactus {
+  background-color: #fffaf3;
+  position: relative;
+  overflow: hidden;
+}
+
+.cactus-img {
+  width: 90%;
+  max-width: 400px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.mensaje {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0 20px;
+  text-transform: uppercase;
+  max-width: 90%;
+}
+
+/* ANIMACIÓN ACTIVA */
+.animar.activo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SECCIÓN 4: SAVE THE DATE */
+.titulo-fecha {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calendario {
+  margin: 20px 0;
+}
+
+.calendario .mes {
+  background-color: #a5713d;
+  color: white;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+}
+
+.calendario table {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.calendario th,
+.calendario td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+  width: 14%;
+}
+
+.resaltado {
+  background-color: #ffd700;
+  font-weight: bold;
+  border: 2px solid #a5713d;
+  border-radius: 50%;
+}
+
+.fecha-grande {
+  margin: 20px 0 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.numero-dia {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin: 0 10px;
+  color: #a5713d;
+}
+
+.btn-calendario {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #a5713d;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-calendario:hover {
+  background-color: #8b5d2c;
+}
+
+/* SECCIÓN 5: CONTADOR Y CONFIRMACIÓN */
+.titulo-contador {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contador {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contador div {
+  background-color: #5a3b1f;
+  color: white;
+  padding: 15px 10px;
+  border-radius: 8px;
+  min-width: 60px;
+}
+
+.contador span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: block;
+}
+
+.contador small {
+  font-size: 0.8rem;
+  display: block;
+  margin-top: 4px;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 12px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5c;
+}
+
+.llamado {
+  margin-top: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #5a3b1f;
+}
+
+/* SECCIÓN 6: UBICACIÓN Y VESTIMENTA */
+.titulo-seccion {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sububicacion {
+  font-size: 1rem;
+  color: #7b5932;
+  margin-bottom: 15px;
+}
+
+.btn-mapa {
+  background-color: #5a3b1f;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-mapa:hover {
+  background-color: #3e2812;
+}
+
+.direccion {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.vestimenta {
+  margin-top: 30px;
+}
+
+.titulo-vestimenta {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.texto-vestimenta {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #a5713d;
+}
+
+.icono-vestimenta {
+  width: 280px;
+  /* o prueba con 150px según tu preferencia */
+  margin: 15px auto;
+  display: block;
+}
+
+/* SECCIÓN 7: DESPEDIDA Y AUDIO FINAL */
+.titulo-despedida {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #5a3b1f;
+}
+
+.mensaje-final {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+.decoracion-final {
+  width: 100px;
+  margin-top: 20px;
+}
+
+.hora-evento {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5a3b1f;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.pantalla-inicial {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fdf7f0;
+  background-image: url('./assets/images/fondo_principal.webp');
+  background-size: cover;
+  /* ✅ Cubre todo el alto y ancho */
+  background-position: center top;
+  /* ✅ Se enfoca en mostrar el inicio del diseño */
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  /* ✅ Permite buen scroll en móviles */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  text-align: center;
+  padding: 20px;
+}
+
+.pantalla-inicial h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5a3b1f;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .pantalla-inicial {
     background-size: cover;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 2px 2px #5a3b1f50;
+    /* O usa contain si prefieres que no se recorte nada */
+    background-attachment: scroll;
   }
-  
-  .nombre {
-    font-size: 2.5rem;
-    margin-top: 20px;
-    line-height: 1.1;
-    font-family: 'Georgia', serif;
-    text-transform: uppercase;
-    position: relative;
+}
+
+.oculto {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
 
-  /* SECCIÓN 3: CACTUS Y MENSAJE */
-.seccion-cactus {
-    background-color: #fffaf3;
-    position: relative;
-    overflow: hidden;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .cactus-img {
-    width: 90%;
-    max-width: 400px;
-    margin-bottom: 30px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
-  }
-  
-  .mensaje {
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding: 0 20px;
-    text-transform: uppercase;
-    max-width: 90%;
-  }
-  
-  /* ANIMACIÓN ACTIVA */
-  .animar.activo {
+}
+
+@keyframes fadeOut {
+  from {
     opacity: 1;
     transform: translateY(0);
   }
 
-  /* SECCIÓN 4: SAVE THE DATE */
-.titulo-fecha {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 10px;
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
   }
-  
-  .calendario {
-    margin: 20px 0;
-  }
-  
-  .calendario .mes {
-    background-color: #a5713d;
-    color: white;
-    padding: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 4px 4px 0 0;
-  }
-  
-  .calendario table {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    font-size: 0.95rem;
-  }
-  
-  .calendario th,
-  .calendario td {
-    border: 1px solid #ccc;
-    padding: 6px;
-    text-align: center;
-    width: 14%;
-  }
-  
-  .resaltado {
-    background-color: #ffd700;
-    font-weight: bold;
-    border: 2px solid #a5713d;
-    border-radius: 50%;
-  }
-  
-  .fecha-grande {
-    margin: 20px 0 10px;
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .numero-dia {
-    font-size: 2.5rem;
-    display: inline-block;
-    margin: 0 10px;
-    color: #a5713d;
-  }
-  
-  .btn-calendario {
-    display: inline-block;
-    margin-top: 15px;
-    background-color: #a5713d;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-calendario:hover {
-    background-color: #8b5d2c;
+}
+
+.pantalla-inicial.fade-out {
+  animation: fadeOut 1s ease forwards;
+}
+
+.boton-mute {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #5a3b1f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 99999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.boton-mute:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .seccion {
+    min-height: auto;
+    padding: 30px 10px;
   }
 
-  /* SECCIÓN 5: CONTADOR Y CONFIRMACIÓN */
-.titulo-contador {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-  
-  .contador {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 25px;
-  }
-  
-  .contador div {
-    background-color: #5a3b1f;
-    color: white;
-    padding: 15px 10px;
-    border-radius: 8px;
-    min-width: 60px;
-  }
-  
-  .contador span {
-    font-size: 1.8rem;
-    font-weight: bold;
-    display: block;
-  }
-  
-  .contador small {
-    font-size: 0.8rem;
-    display: block;
-    margin-top: 4px;
-  }
-  
-  .btn-whatsapp {
-    background-color: #25d366;
-    color: white;
-    padding: 12px 20px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-whatsapp:hover {
-    background-color: #1ebe5c;
-  }
-  
-  .llamado {
+  .decoracion {
     margin-top: 10px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #5a3b1f;
+    width: 90px;
   }
 
-  /* SECCIÓN 6: UBICACIÓN Y VESTIMENTA */
-.titulo-seccion {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  
-  .sububicacion {
-    font-size: 1rem;
-    color: #7b5932;
-    margin-bottom: 15px;
-  }
-  
-  .btn-mapa {
-    background-color: #5a3b1f;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-  }
-  
-  .btn-mapa:hover {
-    background-color: #3e2812;
-  }
-  
-  .direccion {
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .vestimenta {
-    margin-top: 30px;
-  }
-  
-  .titulo-vestimenta {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .texto-vestimenta {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #a5713d;
-  }
-  
-  .icono-vestimenta {
-    width: 60px;
-    margin-top: 10px;
-  }
-
-  /* SECCIÓN 7: DESPEDIDA Y AUDIO FINAL */
-.titulo-despedida {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #5a3b1f;
-  }
-  
   .mensaje-final {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.2;
-    margin-top: 20px;
+    font-size: 2rem;
   }
-  
-  .decoracion-final {
-    width: 100px;
-    margin-top: 20px;
-  }
-  
-  .hora-evento {
+
+  .titulo-contador,
+  .titulo-seccion {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #5a3b1f;
-    margin-top: 5px;
-    text-transform: uppercase;
   }
 
-  .pantalla-inicial {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #fdf7f0;
-    background-image: url('./assets/images/fondo_principal.webp');
-    background-size: cover;             /* ✅ Cubre todo el alto y ancho */
-    background-position: center top;    /* ✅ Se enfoca en mostrar el inicio del diseño */
-    background-repeat: no-repeat;
-    background-attachment: scroll;      /* ✅ Permite buen scroll en móviles */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    text-align: center;
-    padding: 20px;
-  }   
-  
-  .pantalla-inicial h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #5a3b1f;
-    max-width: 90%;
-    margin-bottom: 20px;
+  .nombre {
+    font-size: 2rem;
   }
 
-  @media (max-width: 768px) {
-    .pantalla-inicial {
-      background-size: cover; /* O usa contain si prefieres que no se recorte nada */
-      background-attachment: scroll;
-    }
-  }  
-  
-  .oculto {
-    display: none;
+  .edad .numero {
+    font-size: 4rem;
   }
-  
-  .fade-in {
-    animation: fadeIn 1s ease forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+}
 
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(-30px);
-    }
-  }
-  
-  .pantalla-inicial.fade-out {
-    animation: fadeOut 1s ease forwards;
-  }
+.decoracion-superior {
+  display: flex;
+  flex-direction: row;
+  /* 👈 Esto asegura que estén en horizontal */
+  justify-content: center;
+  /* Centra todo el grupo */
+  align-items: center;
+  gap: 40px;
+  /* Espacio entre los íconos */
+  margin-bottom: 20px;
+}
 
-  .boton-mute {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #5a3b1f;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 99999;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease;
-  }
-  
-  .boton-mute:hover {
-    transform: scale(1.1);
-  }
-  
-  @media screen and (max-width: 768px) {
-    .seccion {
-      min-height: auto;
-      padding: 30px 10px;
-    }
-  
-    .decoracion {
-      margin-top: 10px;
-      width: 90px;
-    }
-  
-    .mensaje-final {
-      font-size: 2rem;
-    }
-  
-    .titulo-contador,
-    .titulo-seccion {
-      font-size: 1.5rem;
-    }
-  
-    .nombre {
-      font-size: 2rem;
-    }
-  
-    .edad .numero {
-      font-size: 4rem;
-    }
-  }
+.icono-superior {
+  width: 50px;
+  height: auto;
+}
 
-  .decoracion-superior {
-    display: flex;
-    flex-direction: row;        /* 👈 Esto asegura que estén en horizontal */
-    justify-content: center;    /* Centra todo el grupo */
-    align-items: center;
-    gap: 40px;                   /* Espacio entre los íconos */
-    margin-bottom: 20px;
-  }
-  
+@media (max-width: 768px) {
   .icono-superior {
-    width: 50px;
-    height: auto;
+    width: 55px;
   }
-  
-  @media (max-width: 768px) {
-    .icono-superior {
-      width: 55px;
-    }
-  }
-  
+}
