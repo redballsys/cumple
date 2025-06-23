@@ -434,3 +434,24 @@ body {
       font-size: 4rem;
     }
   }
+
+  .decoracion-superior {
+    display: flex;
+    flex-direction: row;        /* 👈 Esto asegura que estén en horizontal */
+    justify-content: center;    /* Centra todo el grupo */
+    align-items: center;
+    gap: 40px;                   /* Espacio entre los íconos */
+    margin-bottom: 20px;
+  }
+  
+  .icono-superior {
+    width: 70px;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .icono-superior {
+      width: 55px;
+    }
+  }
+  
